@@ -23,10 +23,11 @@
                 Console.WriteLine("1 - Remove a Vegetable by Index          2 - Remove a Vegetable by Value");
                 Console.WriteLine("3 - Search for a Vegetable               4 - Add a Vegetable");
                 Console.WriteLine("5 - Sort List                            6 - Clear the list");
+                Console.WriteLine("7 - Quit");
                 Console.Write("Selection: ");
                 int.TryParse( Console.ReadLine(), out selection );
 
-                if (selection <= 0 || selection > 6) //Invalid selection
+                if (selection <= 0 || selection > 7) //Invalid selection
                 {
                     Console.WriteLine("");
                     Console.WriteLine("Invalid Selection");
@@ -111,6 +112,10 @@
                 else if (selection == 6) //Clear the list
                 {
                     vegetables.Clear();
+                }
+                else if (selection == 7)
+                {
+                    running = false;
                 }
 
                 Console.WriteLine("");
